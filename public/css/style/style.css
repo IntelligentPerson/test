@@ -1,0 +1,75 @@
+.clearfix:before,
+.clearfix:after {
+	content:"";
+	display:table;
+}
+.clearfix:after {
+	clear:both;
+}
+.clearfix {
+	zoom:1; /* Хак для IE 6 и 7 */
+}
+
+
+.show_wrap{
+	padding-right: 23px;
+    margin-right: 10px;
+}
+.show_title{
+	position: relative;
+	width: 290px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #999;
+	cursor: pointer;
+}
+.show_info{
+	display: none;
+	min-width: 100%;
+	background-color: #FFFFFF;
+	font-size: 13px;
+	margin: 10px 0;
+}
+.down:after{
+	content: '\f078';
+	font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.down.active:after {
+	-moz-transform: rotate(-180deg);
+	-webkit-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+/*body{
+	background-color: red;
+}*/
+
+input.first_uppercase_letter {
+	text-transform: capitalize;
+}
+
+input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.add_file_button {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
